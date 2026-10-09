@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aroma Coffee and Tea House - Home</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<div class="bean">🫘</div>
+<body>
+
+    <h1>Aroma Coffee and Tea House</h1>
+    <div class="coffee-cup">
+    <div class="steam steam1"></div>
+    <div class="steam steam2"></div>
+    <div class="steam steam3"></div>
+    ☕
+</div>
+    <h2 class="welcome">
+    Welcome to Aroma Coffee & Tea House
+</h2>
+
+    <hr>
+
+    <!-- Navigation Section -->
+    <a href="index.html">Home</a> |
+    <a href="about.html">About Us</a> |
+    <a href="products.html">Products</a> |
+    <a href="contact.html">Contact Us</a>
+
+    <hr>
+
+    <!-- Introduction -->
+    <p>
+        <button id="darkModeBtn">🌙 Dark Mode</button>
+        Welcome to Aroma Coffee and Tea House, your destination for freshly
+        brewed coffee and premium quality tea. We are committed to providing
+        customers with delicious beverages and a relaxing atmosphere.
+    </p>
+
+    <!-- Image -->
+    <img src="Images/tea.jpeg" alt="A cup of tea" width="400"   height="300" style="display: block; margin: 0 auto;">
+    <p>
+        We offer a wide variety of coffee and tea products, including espresso,
+        cappuccino, latte, black tea, green tea, and herbal tea. Our beverages
+        are prepared using carefully selected ingredients to ensure excellent
+        taste and quality.
+        <img src="Images/tea2.jpeg" alt="A cup of tea" width="400" height="300" style="display: block; margin: 0 auto;">
+    </p>
+
+    <hr>
+    <div id="barista">👨‍🍳☕</div>
+    <script>
+const btn = document.getElementById("darkModeBtn");
+
+btn.addEventListener("click", function () {
+    document.body.classList.toggle("dark-mode");
+});
+</script>
+<script>
+document.addEventListener("click", function(e){
+
+    const ripple = document.createElement("span");
+
+    ripple.classList.add("ripple");
+
+    ripple.style.left = e.pageX + "px";
+    ripple.style.top = e.pageY + "px";
+
+    ripple.style.width = "20px";
+    ripple.style.height = "20px";
+
+    document.body.appendChild(ripple);
+
+    setTimeout(() => {
+        ripple.remove();
+    }, 600);
+
+});
+</script>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            Aroma Coffee and Tea House &copy; 2026. All Rights Reserved.
+        </p>
+    </footer>
+
+</body>
+</html>
